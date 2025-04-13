@@ -1,0 +1,29 @@
+{
+  "name": "banana-plantation-backend",
+  "version": "1.0.0",
+  "description": "Banana plantation api",
+  "author": "Tarek BARGACH",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --runInBand",
+    "build": "node esbuild.config.js",
+    "deploy": "yarn build && sam build && sam deploy --guided",
+    "start:api": "yarn build && sam build && sam local start-api"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.149",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.1",
+    "esbuild": "^0.25.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.1",
+    "ts-node": "^10.9.2",
+    "tslint": "^5.12.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "yup": "^1.6.1"
+  }
+}
