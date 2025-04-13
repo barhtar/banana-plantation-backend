@@ -6,11 +6,13 @@ In order to deploy, you need to configure the AWS CLI on your local.
 
 How to run:
 
-In order to run the lambda locally, you need to run your docker daemon and execute: yarn start:api
+At the beginning, you need to run: "yarn install" in order to install all the necessary dependencies.
 
-In order to deploy on AWS, run the command: yarn deploy
+In order to run the lambda locally, you need to run your docker daemon and execute: "yarn start:api"
 
-In order to execute unit tests, run: yarn test
+In order to deploy on AWS, run the command: "yarn deploy"
+
+In order to execute unit tests, run: "yarn test"
 
 WHat does this endpoint return:
 
