@@ -1,8 +1,9 @@
-import { DIRECTIONS, Instruction, MOVES, Position } from './position.namespace';
+import { CustomError } from "../../functions/custom-error";
+import { DIRECTIONS, Instruction, MOVES, Position } from "./position.namespace";
 
 const getNextPosition = (
   actualPosition: Position,
-  instruction: Instruction,
+  instruction: Instruction
 ): Position => {
   if (instruction === Instruction.A) {
     const { x, y, direction } = actualPosition;
@@ -16,7 +17,7 @@ const getNextPosition = (
     };
 
     if (NewPosition.x < 0 || NewPosition.y < 0) {
-      throw new Error('Invalid position, x and y must be >= 0');
+      throw new CustomError("Invalid position, x and y must be >= 0", 500);
     }
 
     return NewPosition;
@@ -35,7 +36,7 @@ const getNextPosition = (
 
 export const getResult = (
   actualPosition: Position,
-  instructions: Instruction[],
+  instructions: Instruction[]
 ): string => {
   if (!instructions.length) {
     const { x, y, direction } = actualPosition;
